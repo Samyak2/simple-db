@@ -9,7 +9,9 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
+        <derby.version>10.17.1.0</derby.version>
+        <junit.version>5.11.0</junit.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -20,34 +22,25 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbyclient</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyshared -->
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbyshared</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbytools</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- Optionally: parameterized tests support -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbyclient</artifactId>
-            <version>10.17.1.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyshared -->
-        <dependency>
-            <groupId>org.apache.derby</groupId>
-            <artifactId>derbyshared</artifactId>
-            <version>10.17.1.0</version>
-        </dependency>
-
-    </dependencies>
     <build>
         <pluginManagement>
             <!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

@@ -24,3 +24,6 @@ Run following command to build/install
 or
 
 `$mvn clean package`
+
+__NOTE__: to use a lower version of JDK update maven.compiler.release to jdk version and derby.version in pom.xml to the version compatible with JDK release.
+This has not been tested with lower JDK version.

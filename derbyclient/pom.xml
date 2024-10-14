@@ -5,6 +5,7 @@
     <artifactId>simple-db</artifactId>
     <groupId>com.simpledb</groupId>
     <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <groupId>com.simpledb</groupId>
@@ -12,14 +13,6 @@
   <version>1.0-SNAPSHOT</version>
 
   <name>derbyclient</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>17</maven.compiler.release>
-  </properties>
-
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -48,23 +41,18 @@
     <dependency>
       <groupId>org.apache.derby</groupId>
       <artifactId>derbyclient</artifactId>
-      <version>10.17.1.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.derby/derbyshared -->
     <dependency>
       <groupId>org.apache.derby</groupId>
       <artifactId>derbyshared</artifactId>
-      <version>10.17.1.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.apache.derby/derbytools -->
     <dependency>
       <groupId>org.apache.derby</groupId>
       <artifactId>derbytools</artifactId>
-      <version>10.17.1.0</version>
     </dependency>
-
   </dependencies>
-
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
