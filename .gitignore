@@ -37,3 +37,8 @@ buildNumber.properties
 
 .idea/*
 *.iml
+
+*.project
+*.settings
+*.classpath
+.envrc
