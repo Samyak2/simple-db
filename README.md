@@ -27,3 +27,16 @@ or
 
 __NOTE__: to use a lower version of JDK update maven.compiler.release to jdk version and derby.version in pom.xml to the version compatible with JDK release.
 This has not been tested with lower JDK version.
+
+## Usage
+
+Run a `nix-shell`, `mvn package` and then start a server:
+```
+java com.simpledb.server.StartServer
+```
+
+In another terminal, start a client:
+```
+java com.simpledb.simpleclient.SimpleIJ
+```
+Use `jdbc:simpledb://localhost` as the connection URI.

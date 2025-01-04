@@ -1,4 +1,4 @@
-package com.simpledb.impleclient;
+package com.simpledb.simpleclient;
 
 import java.sql.*;
 import java.util.Scanner;
