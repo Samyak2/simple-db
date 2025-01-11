@@ -1,4 +1,4 @@
-package com.simpledb.network;
+package com.simpledb.simpleclient.network;
 import java.sql.*;
 
 import com.simpledb.jdbc.network.NetworkDriver;
